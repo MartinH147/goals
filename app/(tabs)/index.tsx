@@ -1,32 +1,30 @@
 import { Text, View, StyleSheet } from "react-native";
 import { Link } from "expo-router";
-import LinearGradient from "react-native-linear-gradient";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Index() {
   return (
-    // <linearGradient colors={["#4c669f", "#3b5998", "#192f6a"]}>
-    //   <View style={styles.container}>
-    //     <Text style={styles.text}>Home screen</Text>
-    //     <Link href="/about" style={styles.button}>
-    //       Go to About screen
-    //     </Link>
-    //   </View>
-    // </linearGradient>
-    <LinearGradient
-      colors={["#4c669f", "#3b5998", "#192f6a"]}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1 }}
-      style={{ flex: 1 }}
-    >
-      <Text>Hello, Gradient!</Text>
-    </LinearGradient>
+    <View style={styles.container}>
+      <LinearGradient colors={["#f9b16e", "#f68080"]} style={styles.gradient}>
+        <Text style={styles.text}>Home screen</Text>
+        <Link href="/about" style={styles.button}>
+          Go to About screen
+        </Link>
+      </LinearGradient>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#25292e",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  gradient: {
+    height: "100%",
+    width: "100%",
+    display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
