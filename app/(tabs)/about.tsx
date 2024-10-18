@@ -1,9 +1,12 @@
 import { Text, View, StyleSheet } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function AboutScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>About screen</Text>
+      <LinearGradient colors={["#f9b16e", "#f68080"]} style={styles.gradient}>
+        <Text style={styles.text}>Goals screen</Text>
+      </LinearGradient>
     </View>
   );
 }
@@ -14,6 +17,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#25292e",
     justifyContent: "center",
     alignItems: "center",
+  },
+  gradient: {
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   text: {
     color: "#fff",
