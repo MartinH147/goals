@@ -6,12 +6,7 @@ export default function AboutScreen() {
   return (
     <View style={styles.container}>
       <LinearGradient colors={["#f9b16e", "#f68080"]} style={styles.gradient}>
-        <Card title="HELLO WORLD">
-          <Text style={{ marginBottom: 10 }}>
-            The idea with React Native Elements is more about component
-            structure than actual design.
-          </Text>
-        </Card>
+        <Text>Goals screen</Text>
       </LinearGradient>
     </View>
   );
